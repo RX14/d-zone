@@ -47,7 +47,7 @@ function initWebsocket() {
     
     // TODO: We don't need websocket-stream, we can use the native browser websocket api
     var WebSocket = require('websocket-stream');
-    ws = WebSocket('ws://'+socketConfig.address+':'+socketConfig.port);
+    ws = WebSocket('ws://'+window.location.host+':'+socketConfig.port);
     //var TestSocket = require('./script/engine/tester.js'),
     //    ws = new TestSocket(50,3000);
     ws.on('data',function(data) {
